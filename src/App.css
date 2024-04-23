@@ -1,38 +1,362 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap");
+
+body {
+  font-family: "IM Fell English", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register-form-container {
+  background-color: #a7a6a3;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container-wrapper {
+  background-color: #cfcfcd;
+  padding: 20px 60px;
+  gap: 10px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form-logo {
+  color: #535150;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "IM Fell English", serif;
+}
+
+.title {
+  color: #535150;
+  font-weight: bold;
+  font-family: "IM Fell English", serif;
+}
+
+.form-registration {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-input {
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #a7a6a3;
+  background-color: #cfcfcd;
+  outline: none;
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  font-family: "IM Fell English", serif;
+  font-size: 14px;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.form-input:focus {
+  border-bottom: 1px solid #535150;
+}
+
+.form-button {
+  width: 350px;
+  background-color: #a7a6a3;
+  border: 2px solid #858582;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-family: "IM Fell English", serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  border: 2px solid #535150;
+  background-color: #535150;
+  color: #a7a6a3;
+}
+
+.alr-have-acc {
+  font-family: "IM Fell English", serif;
+}
+
+.regform-login-button {
+  border: 0;
+  background: none;
+  font-family: "IM Fell English", serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.avatar-btn {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-img {
+  color: #535150;
+  opacity: 0.7;
+  padding-left: 10px;
+}
+
+.avatar-img:hover {
+  cursor: pointer;
+}
+
+.add-avatar {
+  opacity: 0.5;
+  display: flex;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.home {
+  padding: 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #a7a6a3;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.home-container {
+  border: 1px solid #565554;
+  border-radius: 10px;
+  width: 65%;
+  height: 80%;
+  display: flex;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebar {
+  flex: 1;
+  border-right: 1px solid black;
+  background-color: #6c6b68;
+}
+
+.chat {
+  flex: 2;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #565554;
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  color: #cfcfcd;
+}
+
+.navbar-logo {
+  font-weight: bold;
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+}
+
+.user-img {
+  background-color: #cfcfcd;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logout-btn {
+  background-color: #a7a6a3;
+  border: none;
+  font-family: "IM Fell English", serif;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #6c6b68;
+  color: #a7a6a3;
+}
+
+.search {
+  border-block-start: 1px solid;
+}
+
+.search-form {
+  padding: 10px;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  color: #cfcfcd;
+  outline: none;
+  border-bottom: 1px solid #454443;
+  width: 100%;
+
+  &::placeholder {
+    color: #cfcfcd;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.user-chat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cfcfcd;
+  border-bottom: 1px solid #454443;
+
+  &:hover {
+    background-color: #454443;
+  }
+}
+
+.user-chat-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-chat-info {
+  span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 14px;
+    color: #cfcfcd;
+  }
+}
+
+.chat {
+  flex: 2;
+}
+
+.chat-info {
+  border-bottom: 1px solid black;
+  background-color: #565554;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: #cfcfcd;
+}
+
+.chat-icons {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.icon-add {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-camera {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-more {
+  width: 24px;
+  height: 24px;
+}
+
+.messages {
+  background-color: #858582;
+  padding: 10px;
+  height: calc(100% - 160px);
+  overflow: scroll;
+}
+
+.chat-input {
+  outline: none;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.chat-input-btn {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-add-img {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.chat-btn {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #6c6b68;
+    color: #cfcfcd;
+  }
+}
+
+.message {
+  display: flex;
+  gap: 20px;
+
+  .message-info {
+    display: flex;
+    flex-direction: column;
+    color: #a7a6a3;
+    font-weight: 300;
+  }
+
+  .user-msg-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .message-content {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p {
+      background-color: #cfcfcd;
+      padding: 10px 20px;
+      border-radius: 0px 10px 10px 10px;
+      max-width: max-content;
+    }
+    img {
+      width: 50%;
+    }
+
+    &.owner {
+      flex-direction: row-reverse;
+      .message-content {
+        align-items: flex-end;
+        p {
+          background-color: antiquewhite;
+          border-radius: 10px 0px 10px 10px;
+        }
+      }
+    }
   }
 }
